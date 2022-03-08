@@ -6,7 +6,7 @@ function About() {
     <div className="center">
       <div>
         Minimal presentation of axios, fetch, and react-router.
-        React-router changed significantly with 6.0.0
+        React-router changed significantly with 6.0.0.
       </div>
     </div>
   )
