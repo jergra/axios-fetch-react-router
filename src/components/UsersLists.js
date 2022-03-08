@@ -5,11 +5,12 @@ import axios from 'axios'
 
 export default function UsersList() {
   const [resultsAxios, setResultsAxios] = useState([])
-  const [resultsFetch, setResultsFetch] = useState([])
+  const [resultsFetchAsync, setResultsFetchAsync] = useState([])
+  const [resultsFetchThen, setResultsFetchThen] = useState([])
 
   useEffect(() => {
-
     const AxiosGetData = () => {
+    // function AxiosGetData() {
       return axios.get('https://randomuser.me/api/?results=10')
       .then((res) => {
           console.log("res.data.results: :", res.data.results)
@@ -17,21 +18,33 @@ export default function UsersList() {
       })
     }
     AxiosGetData()
+  }, [])
 
-    const FetchGetData = async () => {
+  useEffect(() => {
+    //const FetchAsyncGetData = async () => {
+    async function FetchAsyncGetData() {
         const res = await fetch('https://randomuser.me/api/?results=10')
-        const data = await res.json()
-        console.log('data.results:', data.results)
-        setResultsFetch(data.results)
+        const myJSON = await res.json()
+        console.log('myJSON.results:', myJSON.results)
+        setResultsFetchAsync(myJSON.results)
     }
-    FetchGetData()
+    FetchAsyncGetData()
+  }, [])
+
+  useEffect(() => {
+    fetch('https://randomuser.me/api/?results=10')
+      .then(res => res.json())
+      .then(myJSON => {
+        console.log(myJSON.results)
+        setResultsFetchThen(myJSON.results)
+      })
   }, [])
 
   return (
     <div className="center">
       
-      <div className="axios">
-        <h1>From Axios</h1>
+      <div className="list">
+        <h3>Axios</h3>
         <div>
           {resultsAxios.map((element, index) => (
             <li key={index}>
@@ -45,10 +58,25 @@ export default function UsersList() {
         </div>
       </div>
       
-      <div>
-        <h1>From Fetch</h1>
+      <div className="list">
+        <h3>Fetch Async/Await</h3>
         <div>
-          {resultsFetch.map((element, index) => (
+          {resultsFetchAsync.map((element, index) => (
+            <li key={index}>
+              <Link
+                to={`/profile/${index}`}
+                state={{element: element}}>
+                {element.name.first} {element.name.last}
+              </Link>
+            </li>
+          ))}
+        </div>
+      </div>
+
+      <div className="list">
+        <h3>Fetch Then</h3>
+        <div>
+          {resultsFetchThen.map((element, index) => (
             <li key={index}>
               <Link
                 to={`/profile/${index}`}
