@@ -1,14 +1,14 @@
 march 7, 2022
 
-C:\dev\docs\react-fetch-display
+C:\dev\docs\axios-fetch-react-router
 
-example of basic react fetch and display
+minimal presentation of:
+    1. syntax difference between axios and fetch
+    2. functioning of react-router in 6.0.0
 
-async/fetch api combined with react-router to
+axios and fetch api calls are combined with react-router to
 go to a separate page to view an individual item from the
-collection that was fetched
-
-note that react-router changed quite a bit with 6.0.0
+data that was fetched
 
 using Next for routing seems better
 

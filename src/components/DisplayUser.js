@@ -9,8 +9,10 @@ export default function DisplayUser() {
   console.log('state.element:', state.element)
   const name = state.element.name.first
   const pic = state.element.picture.large
+  
   return (
     <div className="centerUser">
+        <h3>Profile</h3>
         <img src={pic} alt="" />
         <div>{name}</div>
     </div>
