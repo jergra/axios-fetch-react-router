@@ -3,8 +3,8 @@ March 7, 2022
 C:\dev\docs\axios-fetch-react-router
 
 Minimal presentation of:  
-        syntax difference between axios and fetch  
-        functioning of react-router in 6.0.0
+- syntax difference between axios and fetch  
+- functioning of react-router in 6.0.0
 
 Axios and Fetch api calls are combined with react-router to
 go to a separate page to view an individual item from the
