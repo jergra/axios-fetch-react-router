@@ -35,7 +35,7 @@ export default function UsersList() {
     fetch('https://randomuser.me/api/?results=10')
       .then(res => res.json())
       .then(myJSON => {
-        console.log(myJSON.results)
+        console.log('myJSON.results:', myJSON.results)
         setResultsFetchThen(myJSON.results)
       })
   }, [])
