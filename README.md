@@ -2,7 +2,7 @@ March 7, 2022
 
 C:\dev\docs\axios-fetch-react-router
 
-Minimal presentation of:
+Minimal presentation of:  
         syntax difference between axios and fetch  
         functioning of react-router in 6.0.0
 
@@ -15,7 +15,7 @@ Using Next for routing seems better.
 start:
     npm start
 
-to update code on github:
+to update code on github:  
         git add .  
         git commit -m "message"  
         git push
