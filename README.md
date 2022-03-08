@@ -16,8 +16,8 @@ start:
     npm start
 
 to update code on github:
->   git add .
->   git commit -m "message"
->   git push
+> git add .
+> git commit -m "message"
+> git push
 
 
