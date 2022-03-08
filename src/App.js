@@ -21,7 +21,7 @@ function App() {
         
           {/* Note that :index below could be :anything. 
           The colon is what is important. The actual index number appears in the url 
-          because of UsersList.js line 52: to={`/profile/${index}`}   
+          because of UsersLists.js line 52: to={`/profile/${index}`}   
           If line 31 below were:
             <Route path="/profile/:whatever" element={<DisplayUser />} />
           it would still be the index number that we would see in the url. */}

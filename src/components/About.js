@@ -5,7 +5,7 @@ function About() {
   return (
     <div className="center">
       <div>
-        <div>Get data from API using:</div>
+        <div>Get data from an API using:</div>
         <ul>
           <li>Axios</li>
           <li>Fetch with 'async/await'</li>
