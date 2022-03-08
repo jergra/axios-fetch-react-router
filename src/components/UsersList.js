@@ -17,7 +17,7 @@ export default function UsersList() {
 
   return (
     <div className="centerUsers">
-      <h1>Users List</h1>
+      <h1>List of Users</h1>
       <div>
         {results.map((element, index) => (
           <li key={index}>
