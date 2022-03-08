@@ -1,4 +1,4 @@
-march 7, 2022
+March 7, 2022
 
 C:\dev\docs\axios-fetch-react-router
 
@@ -16,8 +16,8 @@ start:
     npm start
 
 to update code on github:
-> git add .
-> git commit -m "message"
+> git add .  
+> git commit -m "message"  
 > git push
 
 
